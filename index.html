@@ -9,8 +9,8 @@
 <link rel="preload" href="./assets/fonts/Mont-ExtraLightDEMO.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<link rel="shortcut icon" href="./assets/img/favicon.ico">
-	<title>Home Page</title>  <script type="module" crossorigin src="./js/index.min.js?v=1746860107598"></script>
-  <link rel="stylesheet" crossorigin href="./css/index.min.css?v=1746860107598">
+	<title>Home Page</title>  <script type="module" crossorigin src="./js/index.min.js?v=1747302578979"></script>
+  <link rel="stylesheet" crossorigin href="./css/index.min.css?v=1747302578979">
 </head>
 	<body>
 		<div class="wrapper">
@@ -50,54 +50,59 @@
 
 <main class="page page--home">
 
-   <section class="page__section--hero hero">
+  <section class="page__section--hero hero">
     <div class="hero__container">
+
       <div class="hero__info">
         <h1 class="hero__title"><span>Бережная уборка квартир и домов в СПБ</span> по фиксированной стоимости</h1>
         <p class="hero__label"><span>от /м²</span> - с гарантий качества по договору</p>
         <p class="hero__text">Выберите вид уборки, получите точный расчёт стоимости и скидку 10% на первый заказ</p>
       </div>
+      <!-- <div class="hero__image">
+        <img src="@img/girl.png" alt="Image">
+      </div> -->
       <div class="hero__actions">
         <button data-fls-button="" type="submit" class="hero__button button button--blue ">Рассчитать стоимость</button>
-        <button data-fls-button="" type="submit" class="hero__button button button--yellow">Выбрать вид уборкиВыбрать вид уборки</button>
+        <button data-fls-button="" type="submit" class="hero__button button button--yellow">Выбрать вид уборкиВыбрать вид
+          уборки</button>
       </div>
+
     </div>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <div class="navbar__scroll-wrapper">
+          <ul class="navbar__body">
+            <li class="navbar__item">
+              <a href="#" data-fls-scrollto-header="" data-fls-scrollto="page__section page__section--types types" class="navbar__button">Услуги</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Рассчитать стоимость</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Почему мы</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Как мы делаем уборку</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Отзывы</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Акции</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </section>
 
-    <!-- <div class="wave"></div> -->
-
-
-  <nav class="navbar page__section--nav">
-    <div class="navbar__container">
-      <div class="navbar__scroll-wrapper">
-        <ul class="navbar__body">
-          <li class="navbar__item">
-            <a href="#" data-fls-scrollto-header="" data-fls-scrollto="page__section page__section--types types" class="navbar__button">Услуги</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Рассчитать стоимость</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Почему мы</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Как мы делаем уборку</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Отзывы</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" data-fls-scrollto-header="" data-fls-scrollto="" class="navbar__button">Акции</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- <div class="wave"></div> -->
 
   <section data-fls-watcher="navigator" class="page__section--types types">
     <div class="types__container">
       <h2 class="types__title"><span>6 видов уборки</span> под любую Вашу задачу</h2>
-      <div class="types__lable">Наши услуги подойдут для семейных пар с детьми, владельцев животных, аллергиков, арендодателей</div>
+      <div class="types__lable">Наши услуги подойдут для семейных пар с детьми, владельцев животных, аллергиков,
+        арендодателей</div>
       <div class="types__items">
         <div class="types__item item-types">
           <picture><source media="(max-width: 600px)" srcset="./assets/img/types/01-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/types/01-1200.webp" type="image/webp"><img class="item-types__image" alt="Image"  src="./assets/img/types/01.webp" ></picture>
@@ -107,7 +112,8 @@
           </div>
           <div class="item-types__time"><span>Время работы:</span> 5-7 часов</div>
           <button data-fls-button="" type="submit" class="item-types__button button button--border">от ...</button>
-          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать стоимость</button>
+          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать
+            стоимость</button>
         </div>
         <div class="types__item item-types">
           <picture><source media="(max-width: 600px)" srcset="./assets/img/types/02-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/types/02-1200.webp" type="image/webp"><img class="item-types__image" alt="Image"  src="./assets/img/types/02.webp" ></picture>
@@ -117,7 +123,8 @@
           </div>
           <div class="item-types__time"><span>Время работы:</span> 5-7 часов</div>
           <button data-fls-button="" type="submit" class="item-types__button button button--border">от ...</button>
-          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать стоимость</button>
+          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать
+            стоимость</button>
         </div>
         <div class="types__item item-types">
           <picture><source media="(max-width: 600px)" srcset="./assets/img/types/03-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/types/03-1200.webp" type="image/webp"><img class="item-types__image" alt="Image"  src="./assets/img/types/03.webp" ></picture>
@@ -127,7 +134,8 @@
           </div>
           <div class="item-types__time"><span>Время работы:</span> 2-4 часа</div>
           <button data-fls-button="" type="submit" class="item-types__button button button--border">от ...</button>
-          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать стоимость</button>
+          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать
+            стоимость</button>
         </div>
         <div class="types__item item-types">
           <picture><source media="(max-width: 600px)" srcset="./assets/img/types/04-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/types/04-1200.webp" type="image/webp"><img class="item-types__image" alt="Image"  src="./assets/img/types/04.webp" ></picture>
@@ -137,7 +145,8 @@
           </div>
           <div class="item-types__time"><span>Время работы:</span> 2-4 часа</div>
           <button data-fls-button="" type="submit" class="item-types__button button button--border">от ...</button>
-          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать стоимость</button>
+          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать
+            стоимость</button>
         </div>
         <div class="types__item item-types">
           <picture><source media="(max-width: 600px)" srcset="./assets/img/types/05-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/types/05-1200.webp" type="image/webp"><img class="item-types__image" alt="Image"  src="./assets/img/types/05.webp" ></picture>
@@ -147,7 +156,8 @@
           </div>
           <div class="item-types__time"><span>Время работы:</span> 8-12 часов</div>
           <button data-fls-button="" type="submit" class="item-types__button button button--border">от ...</button>
-          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать стоимость</button>
+          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать
+            стоимость</button>
         </div>
         <div class="types__item item-types">
           <picture><source media="(max-width: 600px)" srcset="./assets/img/types/06-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/types/06-1200.webp" type="image/webp"><img class="item-types__image" alt="Image"  src="./assets/img/types/06.webp" ></picture>
@@ -157,13 +167,12 @@
           </div>
           <div class="item-types__time"><span>Время работы:</span> 8-12 часов</div>
           <button data-fls-button="" type="submit" class="item-types__button button button--border">от ...</button>
-          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать стоимость</button>
+          <button data-fls-button="" type="submit" class="item-types__button button button--blue ">Рассчитать
+            стоимость</button>
         </div>
       </div>
     </div>
-  </section>  
-
-
+  </section>
 
   <section data-fls-watcher="navigator" class="page__section--add-services add-services">
     <div class="add-services__container">
@@ -238,21 +247,26 @@
 
 
       </div>
-      <!-- <div data-fls-watcher data-fls-watcher-once class="add-services__actions actions">
+      <div data-fls-watcher="" class="add-services__actions actions">
         <div class="actions__content">
           <div class="actions__text">Закажите 3 дополнительные услуги <span>и получите четвёртую в подарок</span></div>
-          <button data-fls-button type="submit" class="actions__button button button--blue">Заказать уборку</button>
+          <button data-fls-button="" type="submit" class="actions__button button button--blue">Заказать уборку</button>
         </div>
         <div class="actions__images">
-          <img class="actions__number actions__numbrer--three" src="@img/numbers/3.png" alt="3">
-          <img class="actions__number actions__number--plus" src="@img/numbers/plus.png" alt="+">
-          <img class="actions__number actions__number--one" src="@img/numbers/1.png" alt="1">
+          <div class="actions__number" data-fls-watcher="">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/numbers/3-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/numbers/3-1200.webp" type="image/webp"><img class="actions__number--three" alt="3"  src="./assets/img/numbers/3.webp" ></picture>
+          </div>
+          <div class="actions__number" data-fls-watcher="">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/numbers/plus-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/numbers/plus-1200.webp" type="image/webp"><img class="actions__number--plus" alt="+"  src="./assets/img/numbers/plus.webp" ></picture>
+          </div>
+          <div class="actions__number" data-fls-watcher="">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/numbers/1-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/numbers/1-1200.webp" type="image/webp"><img class="actions__number--one" alt="1"  src="./assets/img/numbers/1.webp" ></picture>
+          </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </section>
 
-  
   <!-- <section data-fls-watcher="navigator"></section>
   <section data-fls-watcher="navigator"></section>
   <section data-fls-watcher="navigator"></section>
