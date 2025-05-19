@@ -9,8 +9,8 @@
 <link rel="preload" href="./assets/fonts/Mont-ExtraLightDEMO.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<link rel="shortcut icon" href="./assets/img/favicon.ico">
-	<title>Home Page</title>  <script type="module" crossorigin src="./js/index.min.js?v=1747304828628"></script>
-  <link rel="stylesheet" crossorigin href="./css/index.min.css?v=1747304828628">
+	<title>Home Page</title>  <script type="module" crossorigin src="./js/index.min.js?v=1747687196512"></script>
+  <link rel="stylesheet" crossorigin href="./css/index.min.css?v=1747687196512">
 </head>
 	<body>
 		<div class="wrapper">
@@ -50,7 +50,7 @@
 
 <main class="page page--home">
 
-   <section class="page__section--hero hero">
+  <section class="page__section--hero hero">
     <div class="hero__container">
       <div class="hero__info">
         <h1 class="hero__title"><span>Бережная уборка квартир и домов в СПБ</span> по фиксированной стоимости</h1>
@@ -62,7 +62,6 @@
         <button data-fls-button="" type="submit" class="hero__button button button--yellow">Выбрать вид уборкиВыбрать вид
           уборки</button>
       </div>
-
     </div>
     <nav class="navbar">
       <div class="navbar__container">
@@ -168,7 +167,7 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <section data-fls-watcher="navigator" class="page__section--add-services add-services">
     <div class="add-services__container">
@@ -263,8 +262,51 @@
     </div>
   </section>
 
+  <!-- <div class="wave"></div> -->
+
+  <section data-fls-watcher="navigator" class="page__section--details details">
+    <div class="wave wave--top">
+      <svg viewBox="0 0 1920 127" preserveAspectRatio="none">
+        <rect width="100%" height="100%" fill="#ffffff"></rect>
+        <path d="M0,0 C640,127 1280,127 1920,0 L1920,127 L0,127 Z" fill="#F2F9FF"></path>
+      </svg>
+    </div>
+    <div class="details__container">
+      <div class="details__title">Посмотрите наглядно как мы делаем уборку</div>
+      <div class="details__lable">Так выглядит уборка в глазах наших клинеров</div>
+      <div data-fls-tabs="" class="details-tabs">
+        <div class="details-tabs__scroll-wrapper">
+          <nav data-fls-tabs-titles="" class="details-tabs__navigation">
+            <button type="button" class="details-tabs__title --tab-active">Cпальная комната</button>
+            <button type="button" class="details-tabs__title">Кухня</button>
+            <button type="button" class="details-tabs__title">Ванная</button>
+            <button type="button" class="details-tabs__title">Прихожая</button>
+          </nav>
+        </div>
+        <div data-fls-tabs-body="" class="details-tabs__content">
+          <div class="details-tabs__body">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/details/02-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/details/02-1200.webp" type="image/webp"><img alt="Image" class="details-tabs__image"  src="./assets/img/details/02.webp" ></picture>
+          </div>
+          <div class="details-tabs__body">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/details/01-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/details/01-1200.webp" type="image/webp"><img alt="Image" class="details-tabs__image"  src="./assets/img/details/01.webp" ></picture>
+          </div>
+          <div class="details-tabs__body">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/details/03-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/details/03-1200.webp" type="image/webp"><img alt="Image" class="details-tabs__image"  src="./assets/img/details/03.webp" ></picture>
+          </div>
+          <div class="details-tabs__body">
+            <picture><source media="(max-width: 600px)" srcset="./assets/img/details/04-600.webp" type="image/webp"><source media="(max-width: 1200px)" srcset="./assets/img/details/04-1200.webp" type="image/webp"><img alt="Image" class="details-tabs__image"  src="./assets/img/details/04.webp" ></picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wave wave--bottom">
+      <svg viewBox="0 0 1920 127" preserveAspectRatio="none">
+        <rect width="100%" height="100%" fill="#ffffff"></rect>
+        <path d="M0,0 C640,127 1280,127 1920,0 L1920,127 L0,127 Z" fill="#F2F9FF"></path>
+      </svg>
+    </div>
+  </section>
   <!-- <section data-fls-watcher="navigator"></section>
-  <section data-fls-watcher="navigator"></section>
   <section data-fls-watcher="navigator"></section>
   <section data-fls-watcher="navigator"></section> -->
 
