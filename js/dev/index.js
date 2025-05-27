@@ -731,6 +731,18 @@ function elementOuterSize(el, size, includeMargins) {
 function makeElementsArray(el) {
   return (Array.isArray(el) ? el : [el]).filter((e) => !!e);
 }
+function setInnerHTML(el, html) {
+  if (html === void 0) {
+    html = "";
+  }
+  if (typeof trustedTypes !== "undefined") {
+    el.innerHTML = trustedTypes.createPolicy("html", {
+      createHTML: (s) => s
+    }).createHTML(html);
+  } else {
+    el.innerHTML = html;
+  }
+}
 let support;
 function calcSupport() {
   const window2 = getWindow();
@@ -1976,11 +1988,9 @@ function transitionEmit(_ref) {
     else dir = "reset";
   }
   swiper.emit(`transition${step}`);
-  if (runCallbacks && activeIndex !== previousIndex) {
-    if (dir === "reset") {
-      swiper.emit(`slideResetTransition${step}`);
-      return;
-    }
+  if (runCallbacks && dir === "reset") {
+    swiper.emit(`slideResetTransition${step}`);
+  } else if (runCallbacks && activeIndex !== previousIndex) {
     swiper.emit(`slideChangeTransition${step}`);
     if (dir === "next") {
       swiper.emit(`slideNextTransition${step}`);
@@ -4865,7 +4875,7 @@ function Pagination(_ref) {
         });
       }
       if (params.type === "custom" && params.renderCustom) {
-        subEl.innerHTML = params.renderCustom(swiper, current + 1, total);
+        setInnerHTML(subEl, params.renderCustom(swiper, current + 1, total));
         if (subElIndex === 0) emit("paginationRender", subEl);
       } else {
         if (subElIndex === 0) emit("paginationRender", subEl);
@@ -4913,7 +4923,7 @@ function Pagination(_ref) {
     swiper.pagination.bullets = [];
     el.forEach((subEl) => {
       if (params.type !== "custom") {
-        subEl.innerHTML = paginationHTML || "";
+        setInnerHTML(subEl, paginationHTML || "");
       }
       if (params.type === "bullets") {
         swiper.pagination.bullets.push(...subEl.querySelectorAll(classesToSelector(params.bulletClass)));
@@ -5251,9 +5261,9 @@ class BeforeAfter {
     }
   }
   // Логінг у консоль
-  // setLogging(message) {
-  // 	this.config.logging ?  : null;
-  // }
+  setLogging(message) {
+    if (this.config.logging) ;
+  }
 }
 new BeforeAfter({});
 class ScrollWatcher {
@@ -5405,7 +5415,7 @@ function pageNavigation() {
       const entry = e.detail.entry;
       const targetElement = entry.target;
       if (targetElement.dataset.flsWatcher === "navigator") {
-        document.querySelector(`[data-fls-scrollto]._navigator-active`);
+        document.querySelector(`[data-fls-scrollto].--navigator-active`);
         let navigatorCurrentItem;
         if (targetElement.id && document.querySelector(`[data-fls-scrollto="#${targetElement.id}"]`)) {
           navigatorCurrentItem = document.querySelector(`[data-fls-scrollto="#${targetElement.id}"]`);
@@ -5436,4 +5446,4 @@ function pageNavigation() {
     goToHash ? gotoBlock(goToHash) : null;
   }
 }
-window.addEventListener("load", pageNavigation);
+document.querySelector("[data-fls-scrollto]") ? window.addEventListener("load", pageNavigation) : null;
