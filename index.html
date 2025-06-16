@@ -9,8 +9,8 @@
 		<link rel="preload" href="./assets/fonts/Mont-ExtraLightDEMO.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1748363678753"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1748363678753">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1750102164000"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1750102164000">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -46,6 +46,13 @@
 			</header>
 			<main class="page page--home">
 				<section class="page__section--hero hero">
+					<div class="hero__image">
+						<picture>
+							<source media="(max-width: 600px)" srcset="./assets/img/heroImage-600.webp" type="image/webp">
+							<source media="(max-width: 1200px)" srcset="./assets/img/heroImage-1200.webp" type="image/webp">
+							<img alt="Image" src="./assets/img/heroImage.webp">
+						</picture>
+					</div>
 					<div class="hero__container">
 						<div class="hero__info">
 							<h1 class="hero__title">
@@ -101,8 +108,10 @@
 							под любую Вашу задачу
 						</h2>
 						<div class="types__lable">
-							Наши услуги подойдут для семейных пар с детьми, владельцев животных, аллергиков,
-        арендодателей
+							<p>
+								Наши услуги подойдут для семейных пар с детьми, владельцев животных, аллергиков,
+          арендодателей
+							</p>
 						</div>
 						<div class="types__items">
 							<div class="types__item item-types">
@@ -377,12 +386,11 @@
 				<section data-fls-watcher="navigator" class="page__section--example example">
 					<div class="example__container">
 						<h2 class="example__title">Исполним уборку любой сложности</h2>
-						<p class="example__label">Посмотрите как преображается квартира, даже в самых сложных ситуациях</p>
-						<!-- Оболонка слайдера -->
+						<div class="example__label">
+							<p>Посмотрите как преображается квартира, даже в самых сложных ситуациях</p>
+						</div>
 						<div data-fls-slider="" class="example__slider swiper">
-							<!-- Частина слайдера, що рухається -->
 							<div class="example__wrapper swiper-wrapper">
-								<!-- Слайд -->
 								<div class="example__slide swiper-slide">
 									<div class="example__image image-example">
 										<div data-fls-beforeafter="" class="image-example__before-after">
@@ -399,7 +407,9 @@
 										</div>
 									</div>
 									<div class="example__content content-example">
-										<h4 class="content-example__title">Объект: однокомнатная квартира</h4>
+										<a href="#">
+											<h4 class="content-example__title">Объект: однокомнатная квартира</h4>
+										</a>
 										<ul class="content-example__list">
 											<li class="content-example__item">
 												<p>
@@ -544,11 +554,80 @@
 								</div>
 							</div>
 							<div class="content-example__swiper-pagination"></div>
-							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
 							<button type="button" class="example__swiper-button example__swiper-button-prev example__swiper-button-prev--icon-left"></button>
 							<button type="button" class="example__swiper-button example__swiper-button-next example__swiper-button-next--icon-left"></button>
-							<!-- Якщо потрібен скролбар -->
 							<div class="swiper-scrollbar"></div>
+						</div>
+					</div>
+				</section>
+				<section data-fls-watcher="navigator" class="page__section--inventory inventory">
+					<div class="inventory__container">
+						<h2 data-fls-title="" class="inventory__title title">Что входит в инвентарь нашего клинера</h2>
+						<div data-fls-lable="" class="inventory__lable lable">
+							<p>Инструменты, с помощью которых создаём уют в вашем доме</p>
+						</div>
+						<div class="inventory__content">
+							<div href="#" class="inventory__decor inventory__decor-left">
+								<a href="#" class="decor-item decor-item--three">
+									<div class="decor-item__image">
+										<picture>
+											<img alt="5 types of detergents" src="./assets/img/inventory/05.webp">
+										</picture>
+									</div>
+									<h4 class="decor-item__title">5 видов моющих средств</h4>
+									<div class="decor-item__lable">
+										<p>подходят для всех типов поверхностей, от паркета до кафеля</p>
+									</div>
+								</a>
+								<a href="#" class="decor-item decor-item--four">
+									<div class="decor-item__image">
+										<picture>
+											<img alt="Masks and gloves" src="./assets/img/inventory/04.webp">
+										</picture>
+									</div>
+									<h4 class="decor-item__title">Маски и перчатки</h4>
+									<div class="decor-item__lable">
+										<p>Соблюдаем меры санитарной безопасности</p>
+									</div>
+								</a>
+							</div>
+							<div class="inventory__info">
+								<div class="inventory__image">
+									<picture>
+										<img alt="Image" src="./assets/img/inventory/01.webp">
+									</picture>
+									<div class="inventory__image-decor inventory__image-decor--one"></div>
+									<div class="inventory__image-decor inventory__image-decor--two"></div>
+								</div>
+								<form action="/submit-phone" method="post" class="inventory__form form-inventory">
+									<input data-fls-input="" data-fls-input-mask="+36(99) 999-99-99" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите ваш телефон" class="form-inventory__item input">
+									<button type="submit" class="form-inventory__item form-inventory__item--yellow">Заказать уборку</button>
+								</form>
+							</div>
+							<div href="#" class="inventory__decor inventory__decor-right">
+								<a href="#" class="decor-item decor-item--one">
+									<div class="decor-item__image">
+										<picture>
+											<img alt="8 types of equipment" src="./assets/img/inventory/02.webp">
+										</picture>
+									</div>
+									<h4 class="decor-item__title">8 видов оборудования</h4>
+									<div class="decor-item__lable">
+										<p>Профессиональная техника для создания чистоты на уровне блеска</p>
+									</div>
+								</a>
+								<a href="#" class="decor-item decor-item--two">
+									<div class="decor-item__image">
+										<picture>
+											<img alt="Mops and napkins" src="./assets/img/inventory/03.webp">
+										</picture>
+									</div>
+									<h4 class="decor-item__title">Швабры и салфетки</h4>
+									<div class="decor-item__lable">
+										<p>Из различной ткани, для эффективной уборки всех типов поверхностей</p>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>
